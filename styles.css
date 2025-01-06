@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.app-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: white;
+}
+
+#engineBtn {
+    background-color: #22c55e;
+}
+
+#engineBtn.running {
+    background-color: #ef4444;
+}
+
+#flightBtn {
+    background-color: #3b82f6;
+}
+
+#flightBtn:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.logs {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    height: 400px;
+    overflow-y: auto;
+    font-family: monospace;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.save-btn {
+    background-color: #6366f1;
+    width: 100%;
+}
+
+/* Optimalizácia pre iPad */
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+    
+    .btn {
+        padding: 24px;
+        font-size: 20px;
+    }
+}
+
+/* Zabránenie označovaniu textu na iOS */
+.btn {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
